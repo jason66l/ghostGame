@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class flashlight : MonoBehaviour
 {
+    public EnergyBar energyBar;
     public float maxDuration = 5f; // The maximum duration the flashlight can stay on
     public float rechargeTime = 3f; // The time it takes for the flashlight to recharge
 
@@ -12,15 +13,19 @@ public class flashlight : MonoBehaviour
 
     public Light flashlightLight;
     public Transform cam;
+    private bool cocurrent = false;
 
     private IEnumerator RechargeFlashlight()
     {
+        cocurrent = true;
         isFlashlightOn = false;
         flashlightLight.enabled = isFlashlightOn;
         yield return new WaitForSeconds(rechargeTime);
         currentDuration = maxDuration;
+        energyBar.SetEnergy(currentDuration);
         isFlashlightOn = !isFlashlightOn;
         flashlightLight.enabled = isFlashlightOn;
+        cocurrent = false;
     }
     public void ToggleFlashlight()
     {
@@ -49,7 +54,7 @@ public class flashlight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        energyBar.SetMaxEnergy(maxDuration);
     }
 
     // Update is called once per frame
@@ -59,6 +64,7 @@ public class flashlight : MonoBehaviour
         if (isFlashlightOn)
         {
             currentDuration -= Time.deltaTime;
+            energyBar.SetEnergy(currentDuration);
             if (currentDuration <= 0f)
             {
                 // The flashlight has run out of power, initiate recharge
@@ -68,6 +74,8 @@ public class flashlight : MonoBehaviour
         else {
             if (currentDuration < maxDuration) {
                 currentDuration += Time.deltaTime;
+                if (!cocurrent)
+                    energyBar.SetEnergy(currentDuration);
             }
         }
         // Toggle flashlight on/off when the player presses the designated key (e.g., F key)
