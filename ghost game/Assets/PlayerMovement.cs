@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public flashlight flashlight;
     public float moveSpeed;
 
     public float groundDrag;
@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //grounded check
+
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, ground);
 
         MyInput();

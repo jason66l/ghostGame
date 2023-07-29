@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -868,6 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9fec2ff8a7a4f158e095cefc958ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashlight: {fileID: 0}
   moveSpeed: 1
   groundDrag: 2
   playerHeight: 0.26
@@ -1028,6 +1029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c746990b97394caf9e32f347f723ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDuration: 5
+  rechargeTime: 3
+  flashlightLight: {fileID: 1799911061}
   cam: {fileID: 963194228}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
