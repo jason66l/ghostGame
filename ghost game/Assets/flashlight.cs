@@ -55,17 +55,21 @@ public class flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(currentDuration);
         if (isFlashlightOn)
         {
             currentDuration -= Time.deltaTime;
-            Debug.Log(currentDuration);
             if (currentDuration <= 0f)
             {
                 // The flashlight has run out of power, initiate recharge
                 StartCoroutine(RechargeFlashlight());
             }
         }
-
+        else {
+            if (currentDuration < maxDuration) {
+                currentDuration += Time.deltaTime;
+            }
+        }
         // Toggle flashlight on/off when the player presses the designated key (e.g., F key)
         if (Input.GetKeyDown(KeyCode.F))
         {
