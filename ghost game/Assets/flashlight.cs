@@ -60,6 +60,7 @@ public class flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.rotation = cam.rotation;
         Debug.Log(currentDuration);
         if (isFlashlightOn)
         {
@@ -85,7 +86,6 @@ public class flashlight : MonoBehaviour
         }
 
         // Rotate the flashlight to match the camera rotation (if needed)
-        transform.rotation = cam.rotation;
         /*if (Input.GetMouseButtonDown(0)) {
 			lights.enabled = !lights.enabled;
         }
