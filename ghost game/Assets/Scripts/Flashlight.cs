@@ -7,6 +7,7 @@ public class flashlight : NetworkBehaviour
     //booleans for ghost
     Vector3 angleUp;
     Vector3 angleSide;
+    [SyncVar]
     public float health;
     public LayerMask ghost;
     bool ghosted;
@@ -29,6 +30,8 @@ public class flashlight : NetworkBehaviour
     public Light flashlightLight;
     public Transform cam;
     private bool cocurrent = false;
+
+    public GhostHealth healthBar;
     private IEnumerator RechargeFlashlight()
     {
         cocurrent = true;
@@ -122,8 +125,8 @@ public class flashlight : NetworkBehaviour
 
                         if (ghosted || ghosted0 || ghosted1 || ghosted2 || ghosted3 || ghosted4 || ghosted5 || ghosted6 || ghosted7)
                         {
-                            health -= 0.001f;
-                            ghosted = false; 
+
+                            health -= 0.005f;
                         }
                         break;
                     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - player
   - ghost
+  - cube
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - ghost
   - ground
-  - 
+  - minimapStuff
   - 
   - 
   - 

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/RemoveBar.cs" />
+     <Compile Include="Assets/Scripts/Spawning.cs" />
      <Compile Include="Assets/Scripts/ERROR_PLAYER.cs" />
      <Compile Include="Assets/Scripts/DamagingPlayer.cs" />
      <Compile Include="Assets/Scripts/TitleScreenManager.cs" />
@@ -50,12 +51,16 @@
      <Compile Include="Assets/Scripts/BarDestroy.cs" />
      <Compile Include="Assets/Scripts/Maze_Renderer.cs" />
      <Compile Include="Assets/Scripts/Custom.cs" />
+     <Compile Include="Assets/Scripts/GhostHealth.cs" />
+     <Compile Include="Assets/Scripts/Pickup.cs" />
      <Compile Include="Assets/ParrelSync/Examples/CustomArgumentExample.cs" />
      <Compile Include="Assets/Scripts/Maze_Generator.cs" />
      <Compile Include="Assets/Scripts/pp.cs" />
      <Compile Include="Assets/Scripts/PlayerHealth.cs" />
      <Compile Include="Assets/Scripts/Flashlight.cs" />
+     <Compile Include="Assets/Scripts/DelayedTracking.cs" />
      <Compile Include="Assets/Scripts/DestroyMap.cs" />
+     <Compile Include="Assets/Scripts/GhostHealthManagement.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/ScriptTemplates/51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : NetworkBehaviour
 {
     // Start is called before the first frame update
     public int health;
@@ -20,29 +21,32 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health > numOfHearts)
+        if (isServer) 
         {
-            health = numOfHearts;
-        }
-
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health) 
+            if (health > numOfHearts)
             {
-                hearts[i].sprite = fullH;
-            }
-            else
-            {
-                hearts[i].sprite = emptyH;
+                health = numOfHearts;
             }
 
-            if (i < numOfHearts)
+            for (int i = 0; i < hearts.Length; i++)
             {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
+                if (i < health) 
+                {
+                    hearts[i].sprite = fullH;
+                }
+                else
+                {
+                    hearts[i].sprite = emptyH;
+                }
+
+                if (i < numOfHearts)
+                {
+                    hearts[i].enabled = true;
+                }
+                else
+                {
+                    hearts[i].enabled = false;
+                }
             }
         }
     }
