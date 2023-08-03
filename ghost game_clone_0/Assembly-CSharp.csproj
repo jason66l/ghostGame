@@ -42,15 +42,18 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/RemoveBar.cs" />
      <Compile Include="Assets/Scripts/ERROR_PLAYER.cs" />
+     <Compile Include="Assets/Scripts/DamagingPlayer.cs" />
      <Compile Include="Assets/Scripts/TitleScreenManager.cs" />
      <Compile Include="Assets/Scripts/Energy Bar.cs" />
      <Compile Include="Assets/Scripts/PlayerCam.cs" />
+     <Compile Include="Assets/Scripts/constantTracking.cs" />
      <Compile Include="Assets/Scripts/BarDestroy.cs" />
      <Compile Include="Assets/Scripts/Maze_Renderer.cs" />
      <Compile Include="Assets/Scripts/Custom.cs" />
      <Compile Include="Assets/ParrelSync/Examples/CustomArgumentExample.cs" />
      <Compile Include="Assets/Scripts/Maze_Generator.cs" />
      <Compile Include="Assets/Scripts/pp.cs" />
+     <Compile Include="Assets/Scripts/PlayerHealth.cs" />
      <Compile Include="Assets/Scripts/Flashlight.cs" />
      <Compile Include="Assets/Scripts/DestroyMap.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
