@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 8526313057835035787}
   - component: {fileID: 1108787896276268522}
   - component: {fileID: 8831968553251664695}
-  - component: {fileID: 1540984584646080720}
+  - component: {fileID: 4767125303891458405}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1540984584646080720
+--- !u!114 &4767125303891458405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,10 +211,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4398372697691761567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71429f20d3cb5443c85fd67a695f17ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f02a9ec099b84fce8b13bf0f26a7940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1390406860664826764}
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  canvas: {fileID: 4398372697691761567}
 --- !u!1 &4862187778655700566
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +368,7 @@ GameObject:
   - component: {fileID: 188030435445282012}
   - component: {fileID: 6397734369505068139}
   - component: {fileID: 4379865223939882239}
+  - component: {fileID: 1783996513765068684}
   m_Layer: 9
   m_Name: ghost
   m_TagString: Untagged
@@ -529,6 +533,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1783996513765068684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739513760878492920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f02a9ec099b84fce8b13bf0f26a7940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  canvas: {fileID: 0}
 --- !u!1 &7235646249707172459
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,8 +583,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 337, y: 122}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 307.10934, y: 124.10935}
+  m_SizeDelta: {x: 143.7813, y: 143.7813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1403464545445486143
 CanvasRenderer:
