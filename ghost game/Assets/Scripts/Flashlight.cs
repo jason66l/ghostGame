@@ -29,7 +29,6 @@ public class flashlight : NetworkBehaviour
     public Light flashlightLight;
     public Transform cam;
     private bool cocurrent = false;
-
     private IEnumerator RechargeFlashlight()
     {
         cocurrent = true;
