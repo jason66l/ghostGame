@@ -22,7 +22,8 @@ public class flashlight : NetworkBehaviour
     public EnergyBar energyBar;
     public float maxDuration = 5f; // The maximum duration the flashlight can stay on
     public float rechargeTime = 3f; // The time it takes for the flashlight to recharge
-
+    
+    [SyncVar(hook = nameof(OnFlashlightStateChange))]
     private bool isFlashlightOn = true;
     private float currentDuration = 5f;
 
@@ -131,5 +132,9 @@ public class flashlight : NetworkBehaviour
                 }
             }
         }
+    }
+     private void OnFlashlightStateChange(bool oldValue, bool newValue)
+    {
+        flashlightLight.enabled = newValue;
     }
 }

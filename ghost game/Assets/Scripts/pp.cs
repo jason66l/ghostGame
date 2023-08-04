@@ -12,6 +12,8 @@ public class pp : NetworkBehaviour
     public float cameraSensitivity = 3.5f;
     private float cameraRotation = 0f;
 
+    public Transform camOrientation;
+
     private CharacterController characterController;
     private Transform orientation;
 
@@ -102,17 +104,19 @@ public class pp : NetworkBehaviour
     [Command]
     void CmdSyncCameraRotation(Quaternion cameraRotation)
     {
+        
         // Update the player's camera rotation on the server
         RpcSyncCameraRotation(cameraRotation);
     }
 
     [ClientRpc]
     void RpcSyncCameraRotation(Quaternion cameraRotation)
-    {
+    {   
         // Update the player's camera rotation on the clients
-        if (!isLocalPlayer && playerCamera != null)
+        if (!isLocalPlayer)
         {
-            playerCamera.transform.localRotation = cameraRotation;
+            //Debug.Log("hauidhaiodjasda");
+            //orientation.transform.localRotation = cameraRotation;
         }
     }
 
@@ -128,4 +132,10 @@ public class pp : NetworkBehaviour
             Cursor.visible = false;
         }
     }
+
+    void Update() 
+    {
+        transform.rotation = orientation.rotation;
+    }
 }
+
